@@ -23,13 +23,17 @@ export const GlobalStyled = createGlobalStyle`
       }
       a{
         text-decoration: none;
+        color: ${Theme.colors.font};
       }
       ul{
         list-style: none;
       }
+      
       button { 
         background-color: unset;
         border: none;
+        cursor: pointer;
+        color: ${Theme.colors.font};
       }
       section {
         padding: 100px 0;
@@ -44,4 +48,11 @@ export const GlobalStyled = createGlobalStyle`
       body:last-child {
         background-color:${Theme.colors.primaryBg}
       }
+
+      p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4;
+      }
+      
 `;

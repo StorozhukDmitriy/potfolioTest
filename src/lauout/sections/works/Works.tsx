@@ -1,20 +1,20 @@
 import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
-import { Menu } from "../../../components/menu/menu";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Work } from "./work/Work";
 import SociakNetwork from "../../../assets/images/proj1.webp";
 import Timer from "../../../assets/images/proj2.webp";
 import { Container } from "../../../components/Container";
-const items = ["All", "landing page", "React", "Testimony", "spa"];
+import { TabMenu } from "./tabMenu/TabMenu";
+const items = ["All", "landing page", "React", "spa"];
 
 export const Works = () => {
   return (
     <StyledWorks>
       <Container>
         <SectionTitle>My Works</SectionTitle>
-        <Menu menuItems={items} />
-        <FlexWrapper>
+        <TabMenu menuItems={items} />
+        <FlexWrapper justify="space-between" align="flex-start">
           <Work
             title={"Social Network"}
             src={SociakNetwork}
@@ -33,7 +33,6 @@ export const Works = () => {
 
 const StyledWorks = styled.section`
   background-color: aqua;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
