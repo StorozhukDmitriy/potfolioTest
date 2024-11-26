@@ -37,7 +37,10 @@ const StyledWork = styled.div`
 `;
 
 const Image = styled.img`
-  height: 260px;
+  min-height: 260px;
+  max-width: 540px;
+  width: 100%;
+  height: 100%;
 `;
 
 const ImageWrapper = styled.div`

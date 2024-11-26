@@ -30,9 +30,8 @@ const HeaderStyledMenu = styled.nav`
     display: flex;
     flex-direction: row;
     gap: 30px;
-    list-style: none;
-    a {
-      text-decoration: none;
+    @media ${Theme.media.tablet} {
+      display:none;
     }
   }
 `;

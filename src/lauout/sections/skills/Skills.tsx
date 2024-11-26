@@ -9,7 +9,7 @@ export const Skills = () => {
     <SlyledSkills>
       <Container>
         <SectionTitle>My Skills</SectionTitle>
-        <FlexWrapper wrap="wrap" justify="space-between">
+        <FlexWrapper wrap="wrap" justify="space-between" >
           <Skill iconId="code" title="html5" discription="" />
           <Skill iconId="css" title="css3" discription="" />
           <Skill iconId="react" title="React" discription="" />

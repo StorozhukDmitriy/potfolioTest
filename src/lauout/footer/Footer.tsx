@@ -43,7 +43,7 @@ export const Footer = () => {
           </SocialIconLink>
         </SocialItem>
       </SocialList>
-      <Copyrigth>© 2023 Dmitrii Storozhuk, All Rights Reserved.</Copyrigth>
+      <Copyrigth>© 2024 Dmitrii Storozhuk, All Rights Reserved.</Copyrigth>
     </StyledFooter>
   );
 };
