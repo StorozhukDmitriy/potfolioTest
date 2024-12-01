@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Icon } from "../../components/icon/Icon";
 import { Theme } from "../../styles/Theme";
+import { font } from "../../styles/Common";
 
 export const Footer = () => {
   return (
@@ -54,9 +55,13 @@ const StyledFooter = styled.footer`
   margin: 40px 0;
 `;
 const Name = styled.span`
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
+  ${font({
+    family: "Josefin Sans, sans-serif",
+    weight: 700,
+    Fmax: 22,
+    Fmin: 16,
+  })};
+
   letter-spacing: 3px;
 `;
 const SocialList = styled.ul`

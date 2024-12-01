@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Theme } from "../../../../styles/Theme";
 import { Link } from "../../../../components/Link";
 
 export const TabMenu = (props: { menuItems: Array<string> }) => {
@@ -22,10 +21,11 @@ const StyledTabMenu = styled.nav`
   ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 30px;
+    max-width: 352px;
+    width: 100%;
+    justify-content: space-between;
     list-style: none;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
     a {
       text-decoration: none;
     }
@@ -34,7 +34,4 @@ const StyledTabMenu = styled.nav`
 
 const ListItem = styled.li`
   /* padding: 10px; */
-
 `;
-
-

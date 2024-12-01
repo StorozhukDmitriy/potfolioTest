@@ -32,8 +32,7 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-  background-color: aqua;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  ${FlexWrapper} {
+    gap: 30px;
+  }
 `;

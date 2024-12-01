@@ -38,7 +38,7 @@ const Photo = styled.img`
 const StyledMain = styled.section`
   min-height: 100dvh;
   display: flex;
-  /* align-items: center; */
+  align-items: center;
 `;
 
 const MainTitle = styled.h1`

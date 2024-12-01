@@ -5,6 +5,7 @@ export const Link = styled.a`
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.07em;
+  white-space: nowrap;
   text-transform: uppercase;
   padding: 10px;
   position: relative;
