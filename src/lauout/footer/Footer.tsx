@@ -1,96 +1,54 @@
-import styled from "styled-components";
+import React from "react";
 import { Icon } from "../../components/icon/Icon";
-import { Theme } from "../../styles/Theme";
-import { font } from "../../styles/Common";
+import { S } from "../footer/Footer_Styled";
+const footerData = [
+  {
+    iconId: "instagramm",
+    width: "21px",
+    height: "21px",
+    viewBox: "0 0 21 21",
+  },
+  {
+    iconId: "telegramm",
+    width: "21px",
+    height: "21px",
+    viewBox: "0 0 21 21",
+  },
+  {
+    iconId: "vk",
+    width: "21px",
+    height: "21px",
+    viewBox: "0 0 21 21",
+  },
+  {
+    iconId: "linkendin",
+    width: "21px",
+    height: "21px",
+    viewBox: "0 0 21 21",
+  },
+];
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
-    <StyledFooter>
-      <Name>Dmitrii</Name>
-      <SocialList>
-        <SocialItem>
-          <SocialIconLink>
-            <Icon
-              iconId="instagramm"
-              width="21px"
-              height="21px"
-              viewBox="0 0 21 21"
-            />
-          </SocialIconLink>
-        </SocialItem>
-        <SocialItem>
-          <SocialIconLink>
-            <Icon
-              iconId="telegramm"
-              width="21px"
-              height="21px"
-              viewBox="0 0 21 21"
-            />
-          </SocialIconLink>
-        </SocialItem>
-        <SocialItem>
-          <SocialIconLink>
-            <Icon iconId="vk" width="21px" height="21px" viewBox="0 0 21 21" />
-          </SocialIconLink>
-        </SocialItem>
-        <SocialItem>
-          <SocialIconLink>
-            <Icon
-              iconId="linkendin"
-              width="21px"
-              height="21px"
-              viewBox="0 0 21 21"
-            />
-          </SocialIconLink>
-        </SocialItem>
-      </SocialList>
-      <Copyrigth>© 2024 Dmitrii Storozhuk, All Rights Reserved.</Copyrigth>
-    </StyledFooter>
+    <S.Footer>
+      <S.Name>Dmitrii</S.Name>
+      <S.SocialList>
+        {footerData.map((f) => {
+          return (
+            <S.SocialItem>
+              <S.SocialIconLink>
+                <Icon
+                  iconId={f.iconId}
+                  width={f.width}
+                  height={f.height}
+                  viewBox={f.viewBox}
+                />
+              </S.SocialIconLink>
+            </S.SocialItem>
+          );
+        })}
+      </S.SocialList>
+      <S.Copyrigth>© 2024 Dmitrii Storozhuk, All Rights Reserved.</S.Copyrigth>
+    </S.Footer>
   );
 };
-
-const StyledFooter = styled.footer`
-  background-color: ${Theme.colors.primaryBg};
-  text-align: center;
-  margin: 40px 0;
-`;
-const Name = styled.span`
-  ${font({
-    family: "Josefin Sans, sans-serif",
-    weight: 700,
-    Fmax: 22,
-    Fmin: 16,
-  })};
-
-  letter-spacing: 3px;
-`;
-const SocialList = styled.ul`
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 30px 0;
-`;
-const SocialItem = styled.li``;
-
-const SocialIconLink = styled.a`
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: ${Theme.colors.accent};
-  &:hover {
-    transform: translateY(-4px);
-    background-color: ${Theme.colors.accent};
-    color: ${Theme.colors.primaryBg};
-  }
-`;
-
-const Copyrigth = styled.small`
-  font-weight: 400;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-`;

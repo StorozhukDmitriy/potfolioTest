@@ -5,8 +5,9 @@ import { Slider } from "../../../components/slider/Slider";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { IconWrapper } from "../../../components/IconWrapper";
 import { Container } from "../../../components/Container";
+import React from "react";
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
   return (
     <StyledTestimony>
       <Container>
