@@ -1,6 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 
-export const Menu = (props: { menuItems: Array<string> }) => {
+export const Menu: React.FC<{ menuItems: Array<string> }> = (props: {
+  menuItems: Array<string>;
+}) => {
   return (
     <StyledMenu>
       <ul>

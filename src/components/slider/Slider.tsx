@@ -1,7 +1,8 @@
+import React from "react";
 import { FlexWrapper } from "../FlexWrapper";
 import { S } from "./Slider_Styled";
 
-export const Slider = () => {
+export const Slider: React.FC = () => {
   return (
     <S.Slider>
       <FlexWrapper>
